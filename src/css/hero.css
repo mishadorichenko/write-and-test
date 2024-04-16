@@ -12,6 +12,11 @@
   z-index: 2;
 }
 
+/* додати для того щоб плавно з'являвся */
+.container-hero {
+  animation: showElements 0.5s linear forwards;
+}
+
 .background-wrapper {
   position: relative; /* Для позиціонування псевдоелемента */
 }

@@ -2,17 +2,21 @@
 html {
   scroll-behavior: smooth;
 }
+
 .header {
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 10;
+  animation: showElements 0.5s linear forwards;
 }
 
-/* .hidden {
-  display: none;
-} */
+/* For hidden elements(hero, header) */
+header.invisible,
+.container-hero.invisible {
+  animation: hideElements 0.5s linear forwards;
+}
 
 .header {
   width: 100%;
@@ -67,7 +71,7 @@ html {
     width: 0;
     z-index: 9999;
     transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    background-image: image-set(
+    /* background-image: image-set(
         url('../img/hero/glass-effect1-mob-menu@1x.png') 1x,
         url('../img/hero/glass-effect1-mob-menu@2x.png') 2x
       ),
@@ -77,7 +81,7 @@ html {
         rgb(105, 41, 45) 67.704%,
         rgb(237, 59, 68) 99.891%
       );
-    background-size: -100%, auto;
+    background-size: 100%, auto; */
   }
 
   .mobile-menu-container {
@@ -191,7 +195,6 @@ html {
     color: #fafafa;
   }
 }
-
 /*menu animation*/
 .item-navigation {
   opacity: 0;
@@ -238,7 +241,7 @@ html {
 /*end menu animation*/
 
 /* modal window animation*/
-
+/*
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(100%);
@@ -266,7 +269,7 @@ html {
   }
 }
 
-/* .modal {
+ .modal {
   opacity: 0;
   transition: all 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
 } */
@@ -323,5 +326,24 @@ html {
   100% {
     transform: scale(0);
     transition-delay: 0.2s;
+  }
+}
+
+/* For hidden elements(hero, header) */
+@keyframes hideElements {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes showElements {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
