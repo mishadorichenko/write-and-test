@@ -14,7 +14,7 @@
 
 /* додати для того щоб плавно з'являвся */
 .container-hero {
-  animation: showElements 0.5s linear forwards;
+  animation: showElements 1.7s linear forwards;
 }
 
 .background-wrapper {
@@ -43,6 +43,15 @@
   );
 }
 
+/* MOBILE 320px */
+@media screen and (min-width: 320px) {
+  .hero-title {
+    margin: 0 auto;
+    max-width: 288px;
+    /* padding-left: 16px; */
+  }
+}
+
 @media screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx),
   screen and (min-device-pixel-ratio: 2) {
@@ -54,7 +63,6 @@
 .hero-title {
   margin: 0 auto;
   max-width: 343px;
-  font-family: 'Inter Tight', sans-serif;
   font-weight: 500;
   font-size: 50px;
   line-height: 1;
@@ -147,9 +155,10 @@ a:hover {
     font-size: 90px;
     padding-bottom: 187px;
     padding-top: 300px;
-    max-width: 632px;
+    max-width: 768px;
     margin: 0;
     padding-left: 32px;
+    margin: 0 auto;
   }
 
   .hero-address-list {
@@ -186,7 +195,7 @@ a:hover {
 
 /* DESKTOP */
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1440px) {
   .background-wrapper::after {
     z-index: 1;
     /* Додаємо прозоре зображення */
